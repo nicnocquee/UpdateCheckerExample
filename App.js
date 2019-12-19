@@ -86,7 +86,8 @@ const Root = () => {
       getLocalVersion={getLocalVersion}
       getLatestAndRequiredVersions={getVersionsFromFirebase}
       getUpdateStatus={getUpdateStatus}>
-      {({isChecking, updateState, versions, checkNow}) => {
+      {({isChecking, updateState, versions, error, checkNow}) => {
+        console.log({updateState, versions, error})
         if (isChecking) {
           return <ActivityIndicator size="large" color="#0000ff" />;
         } else {
