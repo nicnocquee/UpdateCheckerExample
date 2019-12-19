@@ -107,11 +107,10 @@ const Root = () => {
               'New Update',
               'There is a new update in the App Store or Play Store',
             );
-            return null;
-          } else if (updateState === 'none') {
-            // continue with your App
-            return <App />;
-          }
+          } 
+
+          // continue with your App
+          return <App />;
         }
       }}
     </UpdateChecker>
